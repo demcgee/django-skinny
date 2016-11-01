@@ -111,9 +111,12 @@ $ curl --get http://skinny.dev/stats/a2b3
 
 ## getting started
 
-to get started, `fork` this repository, then `clone` onto your local machine.
-create a Django project in this directory, and define the routes; fill in the
-logic behind the routes, then the data storage via a connection to PostgreSQL.
+to get started, `fork` this repository, then `clone` onto your local machine. a
+Django project (initial install) has been created already. define the routes;
+fill in the logic behind the routes, then the data storage via a connection to
+PostgreSQL.
+
+to run this project: `python manage.py runserver`
 
 check in your work regularly, and let me (@bvandgrift) know if you have any
 questions or need any help.
