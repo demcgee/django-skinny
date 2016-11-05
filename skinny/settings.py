@@ -78,8 +78,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'skinny_django_db',
-        'USER': 'demcgee',
-        'PASSWORD': 'amanda123',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
