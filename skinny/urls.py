@@ -13,9 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+  #If URL pattern matches /admin, show admin page
+  url(r'^admin/', admin.site.urls),
+
+  #If URL pattern doesn't match /admin, look for skinnyapp urls
+  url(r'', include('skinnyapp.urls')),
 ]
