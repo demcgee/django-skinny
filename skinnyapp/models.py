@@ -4,7 +4,7 @@ from django.db import models
 
 class slug(models.Model):
     id = models.AutoField(primary_key = True)
-    url = models.URLField(null = False, default = "http://skinny.dev")
+    url = models.URLField(null = False, blank = False, default = "http://skinny.dev")
     slug = models.SlugField(null = False, blank = False, max_length = 50)
 
     class Meta:

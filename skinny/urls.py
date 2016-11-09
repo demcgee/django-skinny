@@ -17,9 +17,9 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-  #If URL pattern matches /admin, show admin page
-  url(r'^admin/', admin.site.urls),
+    # If URL pattern matches /admin, show admin page
+    url(r'^admin/', admin.site.urls),
 
-  #If URL pattern doesn't match /admin, look for skinnyapp urls
-  url(r'', include('skinnyapp.urls')),
+    # If URL pattern doesn't match /admin, look for skinnyapp urls
+    url(r'', include('skinnyapp.urls')),
 ]
