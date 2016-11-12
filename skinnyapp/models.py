@@ -10,6 +10,9 @@ class slug(models.Model):
     class Meta:
         db_table = 'slugs'
 
+def __str__(self):
+    return self.url
+
 class lookup(models.Model):
     id = models.AutoField(primary_key = True)
     slug_id = models.ForeignKey(slug, on_delete = models.CASCADE)
@@ -19,3 +22,6 @@ class lookup(models.Model):
 
     class Meta:
         db_table = 'lookups'
+        
+def __str__(self):
+    return self.slug_id

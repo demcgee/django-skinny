@@ -1,10 +1,20 @@
-<!-- Testing to see if page is being properly displayed -->
+{% extends "skinnyapp/base.html" %}
+  
+{% block title %}Skinny - Make your URL shorter!{% endblock %}
+  
+{% block content %}
 
-<html>
-  <head>
-    <title> Skinny </title>
-  </head>
-  <body>
-    <p> Hello World! </p>
-  </body>
-</html>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="col-sm-9">
+      <input type="text" name="url" id="url" class="form-control input-sm" placeholder="http://facebook.com"/>
+    </div>
+    <div class="col-sm-3">
+      {% csrf_token %}
+      <button id="submitButton" class="btn btn-primary">Submit</button></p>
+    </div>
+  </div>
+  <div class="panel-footer"><span id="url-result">Enter the URL above and click submit!</span>
+  </div>
+</div>
+{% endblock %}
